@@ -20,7 +20,7 @@ frame_width = int(cap.get(3))   # 获取图片帧宽度
 frame_height = int(cap.get(4))  # 获取图像帧高度
 print('摄像头的宽高为：', frame_width, frame_height)
 
-# 创建一个写入视频的io流，参数依次为 指定保存视频名称，指定视频编码器，视频帧率(每秒刷新多少图像帧)，图像帧尺寸
+# 创建一个写入视频的io流，参数依次为 指定保存视频名称，指定视频编码器，视频帧率(每秒刷新多少图像帧，越大越快)，图像帧尺寸
 out = cv2.VideoWriter('my_capture_video.avi', fourcc, 30, (frame_width, frame_height))
 
 # 如果摄像头没有打开，则退出程序
