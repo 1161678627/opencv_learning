@@ -3,6 +3,7 @@ import numpy as np
 
 # 首先从 http://tools.jb51.net/static/colorpicker/ 网站中得到我们要筛选区间的颜色 rgb值
 # 或者使用截图工具，选中当前颜色的rgb值，然后在这里转换为hsv的upper和lower
+# 或者直接在pycharm中打开该图片，pycharm有取色器可以取出该颜色的rgb值
 # 然后使用如下代码将 rgb转为cv2中 hsv色系的 lower_ upper_值，用于后续在inrange中筛选颜色
 rgb_value = np.uint8([[[160, 89, 35]]])
 hsv_value = cv2.cvtColor(rgb_value, cv2.COLOR_RGB2HSV)
