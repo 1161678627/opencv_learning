@@ -4,6 +4,7 @@ import numpy as np
 img = cv2.imread('./watch.jpg')
 
 # 这个img实际上就是一个ndarray对象，任何符合numpy的操作都可以对他进行，只不过物理意义是像素点
+# 选择roi时，是先选择垂直方向，再选择水平方向的
 
 # 选定图片上某个点的像素
 px = img[55, 55]
