@@ -1,3 +1,12 @@
+'''
+使用sobel算子提取图像的轮廓时，先将图像转为灰度图像，然后分别用如下方法计算sobelx方向的梯度
+cv2.Sobel(frame, cv2.CV_64F, dx=1, dy=0, ksize=5)，计算得到sobelx后，再使用cv2.convertScaleAbs(sobelx) 将 sobelx中的负值梯度
+转为正值梯度，这样得到的梯度轮廓才更加明显、全面。
+使用同样的方式还可以获得dy方向的sobely梯度轮廓，对于sobelx ，sobely我们先不直接展示出来，因为他们获得的轮廓都是一个反向的，如果能将他们融合
+梯度轮廓的效果肯定更好，我们可以使用 cv2.addWeighted(sobelx,0.5,sobely,0.5,0)来融合 dx和dy方向的梯度，再去show，效果会更好，
+注：这样的效果好于 cv2.Sobel(frame, cv2.CV_64F, dx=1, dy=1, ksize=5) 直接将dx dy都设为1 。
+'''
+
 import cv2
 import numpy as np
 
