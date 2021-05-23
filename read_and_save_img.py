@@ -1,5 +1,6 @@
 import cv2
 from matplotlib import pyplot as plt
+import numpy as np
 
 # 其中flags参数可以传0-表示以灰度形式读取， 1-表示读取彩色图片
 # 注意 opencv返回的图片array通道排列是 BGR
@@ -29,4 +30,10 @@ cv2.imwrite('./write_gray_watch.jpg', cv2.cvtColor(img, cv2.COLOR_BGR2GRAY))
 cv2.waitKey(delay=0)
 
 # 一般放在程序的最后，销毁所有cv2窗口
+cv2.destroyAllWindows()
+
+# 在展示原图和处理后的对比图时，除了imshow两次外，可以考虑另一种方式，用np将两个图 水平、垂直 拼接成一张图展示出来 hstack 水平，vstack垂直
+img3 = np.hstack((img, img))
+cv2.imshow('hstack', img3)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
