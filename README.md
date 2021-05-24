@@ -6,3 +6,6 @@ https://pythonprogramming.net/grabcut-foreground-extraction-python-opencv-tutori
 
 ### 中文学习资料：
 https://blog.csdn.net/qq_38660394/article/details/80762011
+
+### 中文视频学习资料：
+https://www.bilibili.com/video/BV1oJ411D71z?p=11
